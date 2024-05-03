@@ -3,18 +3,18 @@
   justify-content: center;
 }
 
-h1 {
+.container h1 {
   text-align: center;
   color: #fff;
 }
 
-ul {
+.container ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
-ul li {
+.container ul li {
   padding: 10px;
   background-color: #f2f2f2;
   margin-bottom: 2px;
@@ -22,11 +22,11 @@ ul li {
   border-radius: 5px;
 }
 
-ul li:hover {
+.container ul li:hover {
   background-color: #ddd;
   cursor: pointer;
 }
 
-ul li:last-child {
+.container ul li:last-child {
   border-bottom: none;
 }
