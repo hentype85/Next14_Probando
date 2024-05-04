@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useState, useEffect } from 'react';
-import './handleTwostates.css';
+import './component.css';
 
 export default function HandleTwoStates() {
   const [datos, setData] = useState(null); // datos de la API
@@ -34,7 +34,7 @@ export default function HandleTwoStates() {
   return (
     <div className="container">
         <ul>
-          <h1>Lista de datos API</h1>
+          <h1>useEffect datos API</h1>
           {error && <li>{error}</li>}
 
           {datos && datos.map((dato) => (
