@@ -3,7 +3,7 @@
     justify-content: center;
     position: relative;
     border: 1px solid rgb(0, 0, 0);
-    height: 550px;
+    height: auto;
 }
   
 .container h1 {
@@ -40,18 +40,33 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
-    height: 100px;
-    /*border: 1px solid rgb(0, 0, 0);*/
+    height: auto;
     color: #fff;
 }
 
 .btn {
     padding: 15px;
-    font-size: 16px;
+    font-size: 15px;
     text-align: center;
     border-radius: 4px;
     cursor: pointer;
     background-color: #2e2e2e;
     color: #fff;
     gap: 2px;
+}
+
+
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+    .center {
+        flex-direction: row;
+        height: auto;
+    }
+    .btn {
+        padding: 10px;
+        font-size: 15px;
+    }
 }

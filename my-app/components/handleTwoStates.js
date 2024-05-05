@@ -52,13 +52,13 @@ export default function HandleTwoStates() {
 
   return (
     <>
-    <div className='center'>
+    <div className='center container'>
+      <h1>useEffect API</h1>
       <button className='btn' onClick={prevPage} disabled={currentPage === 1}>Anterior</button>
       <button className='btn' onClick={nextPage} disabled={datos.length === 0}>Siguiente</button>
     </div>
     <div className="container">
         <ul>
-          <h1>useEffect datos API</h1>
           {datos.length === 0 && <p>No hay mas datos</p>}
           {datos.map((dato) => (
             <li key={dato.id}>
