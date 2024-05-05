@@ -7,12 +7,11 @@ export default function HandleTwoStates() {
   // estados
   const [datos, setData] = useState([]); // datos de la API
   const [error, setError] = useState(null); // error al obtener los datos
-  // estados para la paginacion
+  // estado para la paginacion
   const [currentPage, setCurrentPage] = useState(1); // pagina actual
-  const itemsPerPage = 10; // items por pagina
 
   useEffect(() => {
-    fetch(`https://jsonplaceholder.typicode.com/todos?_page=${currentPage}&_limit=${itemsPerPage}`) //  obtengo datos de la API por pagina
+    fetch(`https://jsonplaceholder.typicode.com/todos?_page=${currentPage}`) //  obtengo datos de la API por pagina
       .then(response => response.json()) // convierto respuesta en JSON
       .then(jsonData => { // datos obtenidos de respuesta
         setData(jsonData); // cargo los datos
@@ -22,12 +21,11 @@ export default function HandleTwoStates() {
         setError(error.message); // si hay error, lanzo excepcion
       });
   }, [currentPage]); // ejecuto cuando cambia la pagina
-
 /*
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`https://jsonplaceholder.typicode.com/todos?_page=${currentPage}&_limit=${itemsPerPage}`);
+        const response = await fetch(`https://jsonplaceholder.typicode.com/todos?_page=${currentPage}`);
         if (!response.ok) {
           throw new Error('Error al obtener los datos');
         }
@@ -64,7 +62,7 @@ export default function HandleTwoStates() {
         </ul>
         <div className="pagination">
           <button onClick={prevPage} disabled={currentPage === 1}>Anterior</button>
-          <button onClick={nextPage} disabled={datos.length < itemsPerPage}>Siguiente</button>
+          <button onClick={nextPage} disabled={datos.length === 0}>Siguiente</button>
         </div>
     </div>
   );
