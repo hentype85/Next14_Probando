@@ -3,6 +3,7 @@
     justify-content: center;
     position: relative;
     border: 1px solid rgb(0, 0, 0);
+    height: 550px;
 }
   
 .container h1 {
@@ -22,6 +23,7 @@
     margin-bottom: 2px;
     border-bottom: 1px solid #ccc;
     border-radius: 1px;
+    width: auto;
 }
   
 .container ul li:hover {
@@ -38,8 +40,8 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
-    height: 200px;
-    border: 1px solid rgb(0, 0, 0);
+    height: 100px;
+    /*border: 1px solid rgb(0, 0, 0);*/
     color: #fff;
 }
 
@@ -48,8 +50,8 @@
     font-size: 16px;
     text-align: center;
     border-radius: 4px;
-    border: none;
     cursor: pointer;
     background-color: #2e2e2e;
     color: #fff;
+    gap: 2px;
 }
