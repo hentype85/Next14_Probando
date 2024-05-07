@@ -14,9 +14,9 @@ export default function HandleInfiniteScroll() {
           .then(jsonData => {
             if (datos.length === 0) { // si no hay datos previos se asigna jsonData a datos
                 setData(jsonData);
-                return;
+            } else {
+                setData(prevData => [...prevData, ...jsonData]); // combino los datos previos y nuevos en un solo array
             }
-            setData(prevData => [...prevData, ...jsonData]); // combino los datos previos y nuevos en un solo array
             setError(null);
           })
           .catch(error => {
