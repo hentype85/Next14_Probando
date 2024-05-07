@@ -9,7 +9,7 @@ export const metadata = {
 export default function tiendaLayout({children}) {
     return (
         <nav>
-            <h3>nav Tienda</h3>
+            <div>navegacion</div>
             <ul>
                 <li>
                     <Link href="/tienda">Tienda</Link>

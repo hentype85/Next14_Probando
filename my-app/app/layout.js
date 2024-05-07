@@ -18,6 +18,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={robotoFont.className}>
+
           <Navbar />
 
         <main>

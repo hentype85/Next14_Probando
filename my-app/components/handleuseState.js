@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from 'react';
-import './component.css';
+import './handleStates.css';
 
 
 export default function HandleuseState() {
