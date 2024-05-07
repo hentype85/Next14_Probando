@@ -12,6 +12,10 @@ export default function HandleInfiniteScroll() {
         fetch(`https://jsonplaceholder.typicode.com/todos?_page=${currentPage}`)
           .then(response => response.json())
           .then(jsonData => {
+            if (datos.length === 0) { // si no hay datos previos se asigna jsonData a datos
+                setData(jsonData);
+                return;
+            }
             setData(prevData => [...prevData, ...jsonData]); // combino los datos previos y nuevos en un solo array
             setError(null);
           })
@@ -31,6 +35,7 @@ export default function HandleInfiniteScroll() {
         return (() => {
             window.removeEventListener('scroll', handleScroll)
         });
+
     }, []);
 
     return (
@@ -41,7 +46,7 @@ export default function HandleInfiniteScroll() {
             <div className="container">
                 <ul>
                     {datos.map(dato => (
-                        <li key={dato.id}>{dato.title}</li>
+                        <li key={dato.id}>{dato.id} - {dato.title}</li>
                     ))}
                 </ul>
                 {error && <div>Error: {error}</div>}
