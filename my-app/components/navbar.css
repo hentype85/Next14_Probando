@@ -1,7 +1,7 @@
 .desktop-menu {
+    display: flex;
     list-style: none;
-    padding: 8px;
-    margin: 8px;
+    margin: 5px 0 5px 0;
     display: flex;
     justify-content: center;
 }
@@ -16,19 +16,30 @@
 
 .desktop-menu .menu-item a {
     text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    font-size: 16px;
-}
-
-.desktop-menu .menu-item:hover {
-    transform: scale(1.5);
-    transition: transform 0.8s;
-    color: #c4c4c4;
+    color: #030202a2;
+    font-size: 20px;
+    text-transform: uppercase;
 }
 
 .desktop-menu .menu-item a:hover {
     color: #c4c4c4;
+}
+
+/*****************************************/
+
+.topdiv {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #fff;
+    padding: 10px 0 10px 0;
+}
+
+.topdiv_content {
+    position: relative;
+    margin-bottom: auto;
 }
 
 /*****************************************/
@@ -46,7 +57,7 @@
     height: 5px;
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 55%;
     background-color: rgb(0, 0, 0);
     transition: 0.2s;
 }

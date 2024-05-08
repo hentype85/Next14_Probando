@@ -43,7 +43,8 @@ export default function HandleInfiniteScroll() {
             <div className='center container'>
                 <h1>Infinite Scroll</h1>
             </div>
-            <div className="container">
+
+            <div className="container-no-top">
                 <ul>
                     {datos.map(dato => (
                         <li key={dato.id}>{dato.id} - {dato.title}</li>
@@ -51,6 +52,7 @@ export default function HandleInfiniteScroll() {
                 </ul>
                 {error && <div>Error: {error}</div>}
             </div>
+
         </>
     );
 }

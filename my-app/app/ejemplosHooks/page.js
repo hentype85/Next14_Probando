@@ -5,10 +5,10 @@ import HandleuseState from '../../components/handleuseState';
 
 export default function EjemplosHooks() {
     return (
-        <div>
-              <HandleuseState />
-              <HandleTwoStates />
-              <HandleInfiniteScroll />
-        </div>
+        <>
+            <HandleuseState />
+            <HandleTwoStates />
+            <HandleInfiniteScroll />
+        </>
     );
 }

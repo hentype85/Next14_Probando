@@ -1,36 +1,38 @@
 .container {
     display: flex;
     justify-content: center;
-    position: relative;
     border: 1px solid rgb(0, 0, 0);
     height: auto;
+    position: relative;
+    bottom: 5px;
+    top: 90px;
 }
-  
+
 .container h1 {
     text-align: center;
     color: #fff;
 }
-  
+
 .container ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
-  
+
 .container ul li {
-    padding: 10px;
+    padding: 12px;
     background-color: #f2f2f2;
-    margin-bottom: 2px;
+    margin-bottom: 3px;
     border-bottom: 1px solid #ccc;
     border-radius: 1px;
     width: auto;
 }
-  
+
 .container ul li:hover {
     background-color: #ddd;
     cursor: pointer;
 }
-  
+
 .container ul li:last-child {
     border-bottom: none;
 }
@@ -55,9 +57,19 @@
     gap: 2px;
 }
 
+.container-no-top {
+    display: flex;
+    justify-content: center;
+    border: 1px solid rgb(0, 0, 0);
+    height: auto;
+    align-items: center;
+    position: relative;
+    bottom: 5px;
+    margin-top: 95px
+}
 
 @media (max-width: 600px) {
-    .container {
+    .container, .container-no-top {
         flex-direction: column;
         height: auto;
     }

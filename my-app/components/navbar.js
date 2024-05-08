@@ -10,7 +10,7 @@ export default function Navbar() {
 
     useEffect(() => {
         const handleResize = () => {
-            if (window.innerWidth > 600) {
+            if (window.innerWidth > 768) {
                 setShowMenu(true);
             } else {
                 setShowMenu(false);
@@ -44,42 +44,48 @@ export default function Navbar() {
 
     return (
         <>
-        <div className={showMenu ? "" : CSSmenubtn} onClick={ () => {toggleMenu();} }>
-            <span className={showMenu ? "" : "bar"}></span>
-            <span className={showMenu ? "" : "bar"}></span>
-            <span className={showMenu ? "" : "bar"}></span>
-        </div>
-        <br/>
-        <div className={showMenu ? "" : "header__nav"}>
-            <nav className={showMenu ? "" : CSSmenunav}>
-                <ul className={showMenu ? "menu desktop-menu" : CSSnavLink}>
-                    <li className={showMenu ? "menu-item" : CSSnavLink} onClick={ () => {closeToggleMenu();} }>
-                        <Link href="/">
-                            Home
-                        </Link>
-                    </li>
-                    <li className={showMenu ? "menu-item" : CSSnavLink} onClick={ () => {closeToggleMenu();} }>
-                        <Link href="/login">
-                            Login
-                        </Link>
-                    </li>
-                    <li className={showMenu ? "menu-item" : CSSnavLink} onClick={ () => {closeToggleMenu();} }>
-                        <Link href="/tienda">
-                            Tienda
-                        </Link>
-                    </li>
-                    <li className={showMenu ? "menu-item" : CSSnavLink} onClick={ () => {closeToggleMenu();} }>
-                        <Link href="/about">
-                            About
-                        </Link>
-                    </li>
-                    <li className={showMenu ? "menu-item" : CSSnavLink} onClick={ () => {closeToggleMenu();} }>
-                        <Link href="/ejemplosHooks">
-                            Ejemplos Hooks
-                        </Link>
-                    </li>
-                </ul>
-            </nav>
+        <div className="topdiv">
+
+            <div className="topdiv_bottom_content">
+                <div className={showMenu ? "" : CSSmenubtn} onClick={ () => {toggleMenu();} }>
+                    <span className={showMenu ? "" : "bar"}></span>
+                    <span className={showMenu ? "" : "bar"}></span>
+                    <span className={showMenu ? "" : "bar"}></span>
+                </div>
+            </div>
+
+            <div className={showMenu ? "" : "header__nav"}>
+                    <nav className={showMenu ? "" : CSSmenunav}>
+                        <ul className={showMenu ? "menu desktop-menu" : CSSnavLink}>
+                            <li className={showMenu ? "menu-item" : CSSnavLink} onClick={ () => {closeToggleMenu();} }>
+                                <Link href="/">
+                                    Home
+                                </Link>
+                            </li>
+                            <li className={showMenu ? "menu-item" : CSSnavLink} onClick={ () => {closeToggleMenu();} }>
+                                <Link href="/login">
+                                    Login
+                                </Link>
+                            </li>
+                            <li className={showMenu ? "menu-item" : CSSnavLink} onClick={ () => {closeToggleMenu();} }>
+                                <Link href="/tienda">
+                                    Tienda
+                                </Link>
+                            </li>
+                            <li className={showMenu ? "menu-item" : CSSnavLink} onClick={ () => {closeToggleMenu();} }>
+                                <Link href="/about">
+                                    About
+                                </Link>
+                            </li>
+                            <li className={showMenu ? "menu-item" : CSSnavLink} onClick={ () => {closeToggleMenu();} }>
+                                <Link href="/ejemplosHooks">
+                                    Ejemplos Hooks
+                                </Link>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
         </div>
         </>
     );
