@@ -6,6 +6,7 @@ import "./navbar.css";
 
 export default function Navbar() {
     const [showMenu, setShowMenu] = useState(true);
+    const [showMobileMenu, setShowMobileMenu] = useState(true);
 
     useEffect(() => {
         const handleResize = () => {
@@ -25,64 +26,54 @@ export default function Navbar() {
 
     }, []);
 
-    // manipular DOM
-    // abrir menu burguer en dispositivos moviles
-    const toggleMenu = () => {
-        let menuBtn = document.querySelector('.menu-btn');
-        let menu = document.querySelector('.nav');
-    
-        menuBtn.addEventListener('click', function() {
-            menuBtn.classList.toggle('active');
-            menu.classList.toggle('active');
-        });
-    }
+    // CSS variable para el menu mobile
+    const CSSmenubtn = showMobileMenu ? "menu-btn" : "menu-btn active";
+    const CSSmenunav = showMobileMenu ? "nav" : "nav active";
+    const CSSnavLink = showMobileMenu ? "nav__list_item" : "nav__list_item active";
 
+    // abrir menu burguer en dispositivos moviles
+    const toggleMenu = () => {    
+        setShowMobileMenu(!showMobileMenu);
+    }
     // cerrar automaticamente menu burguer en dispositivos moviles
     const closeToggleMenu = () => {
-        let navLink = document.querySelectorAll('.nav__list_item');
-        let menuBtn = document.querySelector('.menu-btn');
-        let menu = document.querySelector('.nav');
-    
-        navLink.forEach( (n) => {
-            n.addEventListener('click', () => {
-                menuBtn.classList.remove('active');
-                menu.classList.remove('active');
-            });
-        });
+        if (!showMobileMenu) { // si esta abierto
+            setShowMobileMenu(true);
+        }
     }
-    // fin manipular DOM
 
     return (
         <>
-        <div className={showMenu ? "" : "menu-btn"} onClick={ () => {toggleMenu();  closeToggleMenu();} }>
+        <div className={showMenu ? "" : CSSmenubtn} onClick={ () => {toggleMenu();} }>
             <span className={showMenu ? "" : "bar"}></span>
             <span className={showMenu ? "" : "bar"}></span>
             <span className={showMenu ? "" : "bar"}></span>
         </div>
-        <div class={showMenu ? "" : "header__nav"}>
-            <nav class={showMenu ? "" : "nav"}>
-                <ul className={showMenu ? "menu desktop-menu" : "nav__list"}>
-                    <li className={showMenu ? "menu-item" : "nav__list_item"}>
+        <br/>
+        <div className={showMenu ? "" : "header__nav"}>
+            <nav className={showMenu ? "" : CSSmenunav}>
+                <ul className={showMenu ? "menu desktop-menu" : CSSnavLink}>
+                    <li className={showMenu ? "menu-item" : CSSnavLink} onClick={ () => {closeToggleMenu();} }>
                         <Link href="/">
                             Home
                         </Link>
                     </li>
-                    <li className={showMenu ? "menu-item" : "nav__list_item"}>
+                    <li className={showMenu ? "menu-item" : CSSnavLink} onClick={ () => {closeToggleMenu();} }>
                         <Link href="/login">
                             Login
                         </Link>
                     </li>
-                    <li className={showMenu ? "menu-item" : "nav__list_item"}>
+                    <li className={showMenu ? "menu-item" : CSSnavLink} onClick={ () => {closeToggleMenu();} }>
                         <Link href="/tienda">
                             Tienda
                         </Link>
                     </li>
-                    <li className={showMenu ? "menu-item" : "nav__list_item"}>
+                    <li className={showMenu ? "menu-item" : CSSnavLink} onClick={ () => {closeToggleMenu();} }>
                         <Link href="/about">
                             About
                         </Link>
                     </li>
-                    <li className={showMenu ? "menu-item" : "nav__list_item"}>
+                    <li className={showMenu ? "menu-item" : CSSnavLink} onClick={ () => {closeToggleMenu();} }>
                         <Link href="/ejemplosHooks">
                             Ejemplos Hooks
                         </Link>
