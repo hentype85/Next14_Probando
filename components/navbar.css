@@ -110,12 +110,14 @@
     font-size: 20px;
 }
 
-
 .nav__list_item a {
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
+    padding: 10px 120px;
+    /*border: 1px solid;*/
 }
+
 
 .nav__list_item a:hover {
     color: #8a8a8a;

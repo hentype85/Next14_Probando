@@ -56,34 +56,22 @@ export default function Navbar() {
                 <nav className={showMenu ? "" : CSSmenunav}>
                     <ul className={showMenu ? "menu desktop-menu" : CSSnavLink}>
                         <li className={showMenu ? "menu-item" : CSSnavLink} onClick={ () => {closeToggleMenu();} }>
-                            <Link href="/">
-                                Home
-                            </Link>
+                            <Link href="/">Home</Link>
                         </li>
                         <li className={showMenu ? "menu-item" : CSSnavLink} onClick={ () => {closeToggleMenu();} }>
-                            <Link href="/login">
-                                Login
-                            </Link>
+                            <Link href="/login">Login</Link>
                         </li>
                         <li className={showMenu ? "menu-item" : CSSnavLink} onClick={ () => {closeToggleMenu();} }>
-                            <Link href="/tienda">
-                                Tienda
-                            </Link>
+                            <Link href="/tienda">Tienda</Link>
                         </li>
                         <li className={showMenu ? "menu-item" : CSSnavLink} onClick={ () => {closeToggleMenu();} }>
-                            <Link href="/about">
-                                About
-                            </Link>
+                            <Link href="/ejemplosHooks">Hooks React</Link>
                         </li>
                         <li className={showMenu ? "menu-item" : CSSnavLink} onClick={ () => {closeToggleMenu();} }>
-                            <Link href="/">
-                                -
-                            </Link>
+                            <Link href="/about">About</Link>
                         </li>
                         <li className={showMenu ? "menu-item" : CSSnavLink} onClick={ () => {closeToggleMenu();} }>
-                            <Link href="/">
-                                -
-                            </Link>
+                            <Link href="/">*****</Link>
                         </li>
                     </ul>
                 </nav>
