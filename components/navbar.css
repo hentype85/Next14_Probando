@@ -37,19 +37,14 @@
     padding: 10px 0 10px 0;
 }
 
-.topdiv_content {
-    position: relative;
-    margin-bottom: auto;
-}
-
 /*****************************************/
 
 .menu-btn {
-    width: 40px;
+    width: 30px;
     height: 50px;
     position: relative;
     cursor: pointer;
-    z-index: 1000;
+    z-index: 2;
 }
 
 .bar {
@@ -57,10 +52,9 @@
     height: 5px;
     position: absolute;
     top: 50%;
-    left: 90%;
+    left: 60%;
     background-color: rgb(0, 0, 0);
     transition: 0.4s;
-    border-radius: 15px;
 }
 
 .menu-btn .bar:nth-of-type(2) {
@@ -77,26 +71,25 @@
 
 .menu-btn.active .bar:nth-of-type(2) {
     top: 50%;
-    transform: translate(-50%, -50%) rotate(45deg);
+    transform: translate(-10%, -10%) rotate(45deg);
 }
 
 .menu-btn.active .bar:nth-of-type(3) {
     top: 50%;
-    transform: translate(-50%, -50%) rotate(-45deg);
+    transform: translate(-10%, -10%) rotate(-45deg);
 }
 
 .nav {
     position: absolute;
     top: 0;
-    bottom: auto;
     left: 0;
     width: 100%;
     height: 100vh;
     padding: 10% 0% 0% 0%;
-    background: rgba(145, 145, 145, 1);
+    background: rgb(141, 141, 141);
     transform: translateX(100%);
-    transition: transform 0.2s;
-    z-index: 999;
+    transition: transform 0.4s;
+    z-index: 1;
 }
 
 .nav.active {
@@ -106,21 +99,22 @@
 .nav__list_item {
     list-style: none;
     margin-bottom: 30px;
-    background-color: #092d7ac2;
-    padding: 20px;
+    /*background-color: #00000080;*/ /*ver padding*/
+    padding: 10px;
     text-align: center;
-    font-size: 18px;
+    font-size: 30px;
 }
 
 .nav__list_item a {
-    color: #fff;
+    color: #000000;
     text-decoration: none;
     text-transform: uppercase;
     padding: 14px 50px;
+    font-weight: 400;
     /*border: 1px solid;*/
 }
 
 .nav__list_item a:hover {
     color: #8a8a8a;
-    transition: 0.2s;
+    transition: 0.1s;
 }
