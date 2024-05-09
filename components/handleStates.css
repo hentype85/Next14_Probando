@@ -1,11 +1,10 @@
 .container {
     display: flex;
     justify-content: center;
-    border: 1px solid rgb(0, 0, 0);
+    /*border: 1px solid rgb(0, 0, 0);*/
     height: auto;
     position: relative;
     bottom: 5px;
-    top: 90px;
 }
 
 .container h1 {

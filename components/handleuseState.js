@@ -9,7 +9,6 @@ export default function HandleuseState() {
   
     return (
         <div className='container center'>
-            <h1>useState</h1>
             <button className='btn' onClick={() => { setCount(count + 1) }}>
                 click = {count}
             </button>

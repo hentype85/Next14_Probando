@@ -52,10 +52,14 @@ export default function HandleTwoStates() {
 
   return (
     <>
-    <div className='center container'>
-      <h1>useEffect API</h1>
-      <button className='btn' onClick={prevPage} disabled={currentPage === 1}>Anterior</button>
-      <button className='btn' onClick={nextPage} disabled={datos.length === 0}>Siguiente</button>
+    <div className='container center'>
+      <div className='btn__space'>
+        <button className='btn' onClick={prevPage} disabled={currentPage === 1}>Anterior</button>
+      </div>
+        <h1>Fetch</h1>
+      <div className='btn__space'>
+        <button className='btn' onClick={nextPage} disabled={datos.length === 0}>Siguiente</button>
+      </div>
     </div>
     <div className="container">
         <ul>

@@ -26,9 +26,17 @@ export default function HandleInfiniteScroll() {
 
     useEffect(() => {
         function handleScroll() {
-            // si el scroll llega al final de la pagina
-            if (window.innerHeight + document.documentElement.scrollTop === document.documentElement.offsetHeight) {
-                setCurrentPage(prevPage => prevPage + 1); // cargo la siguiente pagina
+            // posicion del scroll
+            const scrollPosition = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+            // posicion altura de la ventana
+            const windowHeight = window.innerHeight;
+
+            // calcular posicion en mitad de la pagina
+            const halfPageHeight = document.documentElement.scrollHeight / 2;
+
+            // si el scroll esta en la mitad de la pagina
+            if (scrollPosition + windowHeight >= halfPageHeight) {
+                setCurrentPage(prevPage => prevPage + 1); // cargar siguiente
             }
         }
         window.addEventListener('scroll', handleScroll);
@@ -40,11 +48,11 @@ export default function HandleInfiniteScroll() {
 
     return (
         <>
-            <div className='center container'>
+            <div className='center'>
                 <h1>Infinite Scroll</h1>
             </div>
 
-            <div className="container-no-top">
+            <div className="container">
                 <ul>
                     {datos.map(dato => (
                         <li key={dato.id}>{dato.id} - {dato.title}</li>
