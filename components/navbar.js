@@ -73,6 +73,12 @@ export default function Navbar() {
                         <li className={showMenu ? "menu-item" : CSSnavLink} onClick={ () => {closeToggleMenu();} }>
                             <Link href="/">*****</Link>
                         </li>
+                        <li className={showMenu ? "menu-item" : CSSnavLink} onClick={ () => {closeToggleMenu();} }>
+                            <Link href="/">*****</Link>
+                        </li>
+                        <li className={showMenu ? "menu-item" : CSSnavLink} onClick={ () => {closeToggleMenu();} }>
+                            <Link href="/">*****</Link>
+                        </li>
                     </ul>
                 </nav>
             </div>
