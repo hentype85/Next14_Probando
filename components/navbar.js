@@ -46,13 +46,14 @@ export default function Navbar() {
         <>
         <div className="topdiv">
 
-            <div className="topdiv_bottom_content">
+            <div>
                 <div className={showMenu ? "" : CSSmenubtn} onClick={ () => {toggleMenu();} }>
                     <span className={showMenu ? "" : "bar"}></span>
                     <span className={showMenu ? "" : "bar"}></span>
                     <span className={showMenu ? "" : "bar"}></span>
                 </div>
             </div>
+
                 <nav className={showMenu ? "" : CSSmenunav}>
                     <ul className={showMenu ? "menu desktop-menu" : CSSnavLink}>
                         <li className={showMenu ? "menu-item" : CSSnavLink} onClick={ () => {closeToggleMenu();} }>
@@ -81,6 +82,7 @@ export default function Navbar() {
                         </li>
                     </ul>
                 </nav>
+
             </div>
         </>
     );
