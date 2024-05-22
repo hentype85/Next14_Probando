@@ -56,16 +56,17 @@
 }
 
 .menu-btn .bar:nth-of-type(1) {
-    top: calc(3% + 1px);
+    top: 22px;
 }
 
 .menu-btn .bar:nth-of-type(2) {
-    top: calc(4% + 2px);
+    top: 32px;
 }
 
 .menu-btn .bar:nth-of-type(3) {
-    top: calc(5% + 2px);
+    top: 42px;
 }
+
 
 .menu-btn.active .bar:nth-of-type(1) {
     display: none;
